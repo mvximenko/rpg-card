@@ -34,6 +34,9 @@ Reactive Extensions for Unity.
 - **[AnimatedTransitionGallery](https://github.com/shu223/AnimatedTransitionGallery)** by [Shuichi Tsutsumi](https://github.com/shu223)<br>
 A gallery app of custom animated transitions for iOS.
 
+- **[Deepvoice3 PyTorch](https://github.com/r9y9/deepvoice3_pytorch)** by [Ryuichi Yamamoto](https://github.com/r9y9)<br>
+PyTorch implementation of convolutional neural networks-based text-to-speech synthesis models.
+
 - **[MessagePack](https://github.com/neuecc/MessagePack-CSharp)** by [Yoshifumi Kawai](https://github.com/neuecc)<br>
 he extremely fast MessagePack serializer for C#. 
 
