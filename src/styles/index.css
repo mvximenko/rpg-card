@@ -3,6 +3,18 @@
   src: url(../assets/beleren.woff)
 }
 
+:root {
+  --main-bg-color: #313338;
+  --card-bg-color: #2b2d31;
+  --field-bg-color: #1e1f22;
+  --main-color: #f2f3f5;
+  --placeholder-color: #7f8184;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,6 +22,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg-color);
 }
 
 code {
