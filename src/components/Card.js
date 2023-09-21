@@ -1,24 +1,15 @@
+import CardField from './CardField';
 import fields from '../data/fields';
 
-const CardField = ({ tag, classNames = '', ...props }) => {
-  const Component = tag || 'input';
-  return <Component className={`card-field ${classNames}`} {...props} />;
-};
-
-const Card = ({ state, handleChange, id, height }) => {
+const Card = ({ state, handleChange, imageRef, id, height }) => {
   const handleClick = () => {
-    document.getElementById('image').click();
+    imageRef.current.click();
   };
 
+  const backgroundImage = `url(${require(`../assets/${state.color.toLowerCase()}.jpg`)})`;
+
   return (
-    <div
-      className='card'
-      id={id}
-      style={{
-        height,
-        backgroundImage: `url(${require(`../assets/${state.color.toLowerCase()}.jpg`)})`,
-      }}
-    >
+    <div className='card' id={id} style={{ height, backgroundImage }}>
       {fields
         .filter((field) => !['color', 'image'].includes(field.id))
         .map(({ placeholder, ...field }) => (

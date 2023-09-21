@@ -1,25 +1,25 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Field from './components/Field';
 import Card from './components/Card';
 import printElement from './utils/printElement';
 import fields from './data/fields';
 
+const initialState = {
+  color: 'White',
+  name: '',
+  mana: '',
+  image: '',
+  type: '',
+  description: '',
+  power: '',
+  author: '',
+};
+
 const App = () => {
-  const [state, setState] = useState({
-    color: 'White',
-    name: 'Discerning Financier',
-    mana: '1',
-    image: '',
-    type: 'Creature - Human Noble',
-    description:
-      'At the beginning of your upkeep, if an opponent controls more lands than you, create a Treasure token.',
-    power: '3/3',
-    author: 'George Maximenko',
-  });
+  const [state, setState] = useState(initialState);
+  const imageRef = useRef(null);
 
-  const handleChange = (event) => {
-    const { target } = event;
-
+  const handleChange = ({ target }) => {
     if (target.files?.[0]) {
       setState((prevState) => ({
         ...prevState,
@@ -35,6 +35,11 @@ const App = () => {
     }
   };
 
+  const resetState = () => {
+    setState(initialState);
+    imageRef.current.value = null;
+  };
+
   return (
     <main className='main'>
       <div className='left'>
@@ -42,13 +47,16 @@ const App = () => {
           <Field
             key={field.id}
             onChange={handleChange}
+            ref={field.id === 'image' ? imageRef : null}
             {...(field.type !== 'file' && { value: state[field.id] })}
             {...field}
           />
         ))}
 
         <div className='buttons'>
-          <button className='button red'>Reset</button>
+          <button className='button red' onClick={resetState}>
+            Reset
+          </button>
           <button
             className='button green'
             onClick={() => printElement('cardForPrint', state.name)}
@@ -59,7 +67,7 @@ const App = () => {
       </div>
 
       <div className='right'>
-        <Card state={state} handleChange={handleChange} />
+        <Card state={state} handleChange={handleChange} imageRef={imageRef} />
       </div>
 
       <div className='out-of-screen'>
