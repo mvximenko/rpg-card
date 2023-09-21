@@ -2,6 +2,7 @@
   display: flex;
   min-height: 100vh;
   min-height: 100dvh;
+  max-height: 100dvh;
 
   .left {
     width: 50%;
@@ -11,10 +12,11 @@
     .field {
       display: flex;
       flex-direction: column;
+      margin-bottom: 15px;
 
-      +.field {
+      /* +.field {
         margin-top: 15px;
-      }
+      } */
 
       >label {
         font-size: 14px;
@@ -31,7 +33,7 @@
       select {
         padding: 10px;
         background-color: var(--field-bg-color);
-        color: white;
+        color: var(--main-color);
         outline: none;
         border: none;
 
@@ -58,19 +60,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  .card {
-    height: 700px;
-    position: relative;
-    aspect-ratio: 0.72 / 1;
-    container-type: size;
-    background-image: url(../assets/white.jpg);
-    background-color: black;
-    /* background-image: url(../assets/df-base.jpg); */
-    background-size: contain;
-    background-repeat: no-repeat;
-    overflow: hidden;
-  }
+.card {
+  height: 700px;
+  position: relative;
+  aspect-ratio: 0.72 / 1;
+  container-type: size;
+  background-image: url(../assets/white.jpg);
+  background-color: black;
+  /* background-image: url(../assets/df-base.jpg); */
+  background-size: contain;
+  background-repeat: no-repeat;
 
   .name {
     top: 5.6%;
@@ -113,7 +114,7 @@
   .power {
     top: 89.6%;
     left: 81.1%;
-    width: 70%;
+    width: 15%;
     font-size: 4cqh;
   }
 
@@ -148,4 +149,10 @@
       height: 100%;
     }
   }
+}
+
+.out-of-screen {
+  position: absolute;
+  top: -300%;
+  right: 100%;
 }

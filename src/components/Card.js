@@ -5,13 +5,18 @@ const CardField = ({ tag, classNames = '', ...props }) => {
   return <Component className={`card-field ${classNames}`} {...props} />;
 };
 
-const Card = ({ state, handleChange }) => {
+const Card = ({ state, handleChange, id, height }) => {
+  const handleClick = () => {
+    document.getElementById('image').click();
+  };
+
   return (
-    <div className='card'>
+    <div className='card' id={id} style={{ height }}>
       {fields
         .filter((field) => !['color', 'image'].includes(field.id))
         .map(({ placeholder, ...field }) => (
           <CardField
+            key={field.id}
             classNames={field.id}
             value={state[field.id]}
             onChange={handleChange}
@@ -19,7 +24,7 @@ const Card = ({ state, handleChange }) => {
           />
         ))}
 
-      <div className='card-image-container'>
+      <div className='card-image-container' onClick={handleClick}>
         {state.image && (
           <img className='card-image' src={state.image} alt='Illustration' />
         )}

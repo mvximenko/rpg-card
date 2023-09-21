@@ -1,19 +1,21 @@
 import { useState } from 'react';
 import Field from './components/Field';
 import Card from './components/Card';
+import printElement from './utils/printElement';
 import fields from './data/fields';
 import './styles/main.css';
 
 const App = () => {
   const [state, setState] = useState({
     color: '',
-    name: '',
-    mana: '',
+    name: 'Discerning Financier',
+    mana: '1',
     image: '',
-    type: '',
-    description: '',
-    power: '',
-    author: '',
+    type: 'Creature - Human Noble',
+    description:
+      'At the beginning of your upkeep, if an opponent controls more lands than you, create a Treasure token.',
+    power: '3/3',
+    author: 'George Maximenko',
   });
 
   const handleChange = (event) => {
@@ -45,10 +47,25 @@ const App = () => {
             {...field}
           />
         ))}
+
+        <div>
+          <button onClick={() => printElement('cardForPrint', state.name)}>
+            Save
+          </button>
+        </div>
       </div>
 
       <div className='right'>
         <Card state={state} handleChange={handleChange} />
+      </div>
+
+      <div className='out-of-screen'>
+        <Card
+          state={state}
+          handleChange={handleChange}
+          height={936}
+          id='cardForPrint'
+        />
       </div>
     </main>
   );
