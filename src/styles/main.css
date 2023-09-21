@@ -60,62 +60,47 @@
   align-items: center;
 
   .card {
-    height: 500px;
+    height: 700px;
     position: relative;
     aspect-ratio: 0.72 / 1;
+    container-type: size;
     background-image: url(../assets/white.jpg);
     background-color: black;
     /* background-image: url(../assets/df-base.jpg); */
     background-size: contain;
     background-repeat: no-repeat;
+    overflow: hidden;
   }
 
   .name {
-    top: 28px;
-    left: 28px;
-    letter-spacing: 0.5px;
+    top: 5.6%;
+    left: 7.8%;
     width: 70%;
-    font-size: 18px;
+    font-size: 3.6cqh;
+    letter-spacing: 0.1cqh;
   }
 
   .mana {
-    top: 28px;
-    right: 44px;
-    letter-spacing: 0.5px;
+    top: 5.8%;
+    right: 12.85%;
     width: 5%;
-    font-size: 18px;
+    font-size: 3.2cqh;
     text-align: center;
   }
 
   .type {
-    top: 286px;
-    left: 28px;
-    width: 70%;
-    font-size: 16px;
-  }
-
-  .power {
-    top: 448px;
-    left: 292px;
-    width: 70%;
-    font-size: 20px;
-  }
-
-  .author {
-    top: 475px;
-    left: 78px;
-    width: 35%;
-    font-size: 8px;
-    letter-spacing: 0.8px;
-    color: #f6f7f8;
+    top: 57.2%;
+    left: 7.8%;
+    width: 74%;
+    font-size: 3.2cqh;
   }
 
   .description {
-    top: 318px;
-    left: 28px;
-    width: 83%;
-    height: 135px;
-    font-size: 16px;
+    top: 63.6%;
+    left: 7.8%;
+    width: 83.5%;
+    height: 27%;
+    font-size: 3.2cqh;
     line-height: 0.95;
     resize: none;
     scrollbar-width: none;
@@ -123,6 +108,22 @@
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  .power {
+    top: 89.6%;
+    left: 81.1%;
+    width: 70%;
+    font-size: 4cqh;
+  }
+
+  .author {
+    top: 95%;
+    left: 21.7%;
+    width: 35%;
+    font-size: 1.5cqh;
+    letter-spacing: 0.16cqh;
+    color: #f6f7f8;
   }
 
   .card-field {
@@ -135,10 +136,11 @@
 
   .card-image-container {
     position: absolute;
-    top: 57px;
-    left: 29px;
-    width: 302px;
-    height: 221px;
+    top: 11.4%;
+    left: 8%;
+    width: 83.8%;
+    height: 44.2%;
+    cursor: pointer;
 
     .card-image {
       object-fit: cover;
