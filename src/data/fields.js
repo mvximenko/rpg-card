@@ -1,5 +1,9 @@
 const fields = [
-  { tag: 'select', id: 'color', options: ['White', 'Green'] },
+  {
+    tag: 'select',
+    id: 'color',
+    options: ['Black', 'Blue', 'Green', 'Red', 'White'],
+  },
   { id: 'name', placeholder: 'Sheoldred' },
   { id: 'mana', title: 'Mana Cost', maxLength: 1, placeholder: '1' },
   { id: 'image', type: 'file' },

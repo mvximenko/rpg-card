@@ -6,7 +6,7 @@ import fields from './data/fields';
 
 const App = () => {
   const [state, setState] = useState({
-    color: '',
+    color: 'White',
     name: 'Discerning Financier',
     mana: '1',
     image: '',

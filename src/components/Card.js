@@ -11,7 +11,14 @@ const Card = ({ state, handleChange, id, height }) => {
   };
 
   return (
-    <div className='card' id={id} style={{ height }}>
+    <div
+      className='card'
+      id={id}
+      style={{
+        height,
+        backgroundImage: `url(${require(`../assets/${state.color.toLowerCase()}.jpg`)})`,
+      }}
+    >
       {fields
         .filter((field) => !['color', 'image'].includes(field.id))
         .map(({ placeholder, ...field }) => (
