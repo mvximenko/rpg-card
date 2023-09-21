@@ -3,7 +3,6 @@ import Field from './components/Field';
 import Card from './components/Card';
 import printElement from './utils/printElement';
 import fields from './data/fields';
-import './styles/main.css';
 
 const App = () => {
   const [state, setState] = useState({
@@ -48,8 +47,12 @@ const App = () => {
           />
         ))}
 
-        <div>
-          <button onClick={() => printElement('cardForPrint', state.name)}>
+        <div className='buttons'>
+          <button className='button red'>Reset</button>
+          <button
+            className='button green'
+            onClick={() => printElement('cardForPrint', state.name)}
+          >
             Save
           </button>
         </div>

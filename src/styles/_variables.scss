@@ -1,0 +1,22 @@
+$main-bg-color: #313338;
+$card-bg-color: #2b2d31;
+$field-bg-color: #1e1f22;
+$main-color: #c9cccf;
+$placeholder-color: #7f8184;
+
+$red: #992d22;
+$green: #248046;
+$blue: #7289da;
+$white: #eaf3ed;
+$author-white: #f6f7f8;
+
+$sm: '600px';
+$md: '960px';
+$lg: '1280px';
+$xl: '1920px';
+
+@mixin media($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

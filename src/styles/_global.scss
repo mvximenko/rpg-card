@@ -1,14 +1,8 @@
-@font-face {
-  font-family: "beleren";
-  src: url(../assets/beleren.woff)
-}
+@use 'variables' as *;
 
-:root {
-  --main-bg-color: #313338;
-  --card-bg-color: #2b2d31;
-  --field-bg-color: #1e1f22;
-  --main-color: #c9cccf;
-  --placeholder-color: #7f8184;
+@font-face {
+  font-family: 'beleren';
+  src: url(../assets/beleren.woff);
 }
 
 * {
@@ -22,7 +16,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--main-bg-color);
+  background-color: $main-bg-color;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+  border: none;
 }
 
 input:-webkit-autofill,
@@ -30,8 +32,8 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-background-clip: text;
-  -webkit-text-fill-color: var(--main-color);
-  box-shadow: inset 0 0 20px 20px var(--field-bg-color);
+  -webkit-text-fill-color: $main-color;
+  box-shadow: inset 0 0 20px 20px $field-bg-color;
 }
 
 code {

@@ -1,77 +1,22 @@
-.main {
-  display: flex;
-  min-height: 100vh;
-  min-height: 100dvh;
-  max-height: 100dvh;
-
-  .left {
-    width: 50%;
-    padding: 50px;
-    background-color: var(--card-bg-color);
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15px;
-
-      /* +.field {
-        margin-top: 15px;
-      } */
-
-      >label {
-        font-size: 14px;
-        color: var(--main-color);
-        padding-bottom: 4px;
-
-        &::first-letter {
-          text-transform: capitalize;
-        }
-      }
-
-      >input,
-      textarea,
-      select {
-        padding: 10px;
-        background-color: var(--field-bg-color);
-        color: var(--main-color);
-        outline: none;
-        border: none;
-
-        &::placeholder {
-          color: var(--placeholder-color)
-        }
-      }
-
-      >textarea {
-        height: 65px;
-        resize: none;
-        scrollbar-width: none;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-.right {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@use 'variables' as *;
 
 .card {
-  height: 700px;
   position: relative;
   aspect-ratio: 0.72 / 1;
   container-type: size;
   background-image: url(../assets/white.jpg);
   background-color: black;
-  /* background-image: url(../assets/df-base.jpg); */
+  // background-image: url(../assets/df-base.jpg);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include media($md) {
+    height: 600px;
+  }
+
+  @include media($lg) {
+    height: 700px;
+  }
 
   .name {
     top: 5.6%;
@@ -124,15 +69,13 @@
     width: 35%;
     font-size: 1.5cqh;
     letter-spacing: 0.16cqh;
-    color: #f6f7f8;
+    color: $author-white;
   }
 
   .card-field {
     position: absolute;
     font-family: beleren;
     background-color: transparent;
-    outline: none;
-    border: none;
   }
 
   .card-image-container {
@@ -149,10 +92,4 @@
       height: 100%;
     }
   }
-}
-
-.out-of-screen {
-  position: absolute;
-  top: -300%;
-  right: 100%;
 }

@@ -1,0 +1,114 @@
+@use 'variables' as *;
+@use 'global';
+@use 'card';
+
+.main {
+  @include media($md) {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100dvh;
+    max-height: 100dvh;
+  }
+
+  .left {
+    padding: 20px 25px;
+    background-color: $card-bg-color;
+
+    @include media($md) {
+      width: 50%;
+    }
+
+    @include media($lg) {
+      padding: 40px 50px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+
+      + .field {
+        margin-top: 15px;
+      }
+
+      > label {
+        font-size: 14px;
+        color: $main-color;
+        padding-bottom: 4px;
+
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+
+      > input,
+      textarea,
+      select {
+        padding: 10px;
+        background-color: $field-bg-color;
+        color: $main-color;
+
+        &::placeholder {
+          color: $placeholder-color;
+        }
+      }
+
+      > textarea {
+        height: 65px;
+        resize: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.right {
+  @include media($md) {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.out-of-screen {
+  position: absolute;
+  top: -300%;
+  right: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.button {
+  width: 50%;
+  color: $white;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.red {
+  background-color: $red;
+}
+
+.green {
+  background-color: $green;
+}
