@@ -6,7 +6,7 @@ const fields = [
   },
   { id: 'name', placeholder: 'Sheoldred' },
   { id: 'mana', title: 'Mana Cost', maxLength: 1, placeholder: '1' },
-  { id: 'image', type: 'file' },
+  { id: 'image', type: 'file', accept: 'image/*' },
   { id: 'type', placeholder: 'Legendary Creature — Phyrexian Praector' },
   { tag: 'textarea', id: 'description', placeholder: 'Deathtouch' },
   {

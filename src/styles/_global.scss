@@ -27,6 +27,11 @@ button {
   border: none;
 }
 
+input,
+textarea {
+  padding: 0;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
