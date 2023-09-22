@@ -3,7 +3,7 @@ const CardField = ({ tag, classNames = '', ...props }) => {
   return (
     <Component
       className={`card-field ${classNames}`}
-      tabindex='-1'
+      tabIndex='-1'
       autoComplete='none'
       {...props}
     />

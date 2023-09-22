@@ -60,6 +60,7 @@ const App = () => {
             href='https://github.com/mvximenko/rpg-card'
             rel='noopener noreferrer'
             target='_blank'
+            aria-label='GitHub'
           >
             <GitHubIcon />
           </a>
