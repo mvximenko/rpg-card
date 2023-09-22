@@ -3,7 +3,7 @@
 ## Getting Started
 
 ```
-git clone https://github.com/mvximenko/dunno.git
+git clone https://github.com/mvximenko/rpg-card.git
 ```
 
 ```
