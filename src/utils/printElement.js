@@ -9,7 +9,7 @@ const printElement = async (element, name) => {
 
   const dataUrl = await domtoimage.toJpeg(node);
   const link = document.createElement('a');
-  link.download = `${name ?? 'noname'}.jpg`;
+  link.download = `${name || 'noname'}.jpg`;
   link.href = dataUrl;
   link.click();
 };

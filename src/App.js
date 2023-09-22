@@ -3,6 +3,7 @@ import Field from './components/Field';
 import Card from './components/Card';
 import printElement from './utils/printElement';
 import fields from './data/fields';
+import { ReactComponent as GitHubIcon } from './assets/github.svg';
 
 const initialState = {
   color: 'White',
@@ -54,9 +55,19 @@ const App = () => {
         ))}
 
         <div className='buttons'>
+          <a
+            className='github'
+            href='https://github.com/mvximenko/rpg-card'
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            <GitHubIcon />
+          </a>
+
           <button className='button red' onClick={resetState}>
             Reset
           </button>
+
           <button
             className='button green'
             onClick={() => printElement('cardForPrint', state.name)}

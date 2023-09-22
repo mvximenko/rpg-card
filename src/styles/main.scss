@@ -7,7 +7,6 @@
     display: flex;
     min-height: 100vh;
     min-height: 100dvh;
-    max-height: 100dvh;
   }
 
   .left {
@@ -102,6 +101,30 @@
 
   &:hover {
     opacity: 0.9;
+  }
+}
+
+.github {
+  display: block;
+  display: flex;
+  align-items: center;
+  background-color: $field-bg-color;
+  padding: 0 5px;
+  line-height: 0;
+
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    fill: $white;
   }
 }
 
