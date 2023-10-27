@@ -30,7 +30,7 @@
       }
 
       > label {
-        font-size: 14px;
+        font-size: toRem(14);
         color: $main-color;
         padding-bottom: 4px;
 
@@ -90,7 +90,7 @@
   width: 50%;
   color: $white;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: toRem(18);
   font-weight: 600;
   letter-spacing: 0.8px;
   cursor: pointer;

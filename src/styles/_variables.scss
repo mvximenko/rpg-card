@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $main-bg-color: #313338;
 $card-bg-color: #2b2d31;
 $field-bg-color: #1e1f22;
@@ -19,4 +21,9 @@ $xl: '1920px';
   @media only screen and (min-width: $breakpoint) {
     @content;
   }
+}
+
+@function toRem($value) {
+  $remValue: (0.625rem * math.div($value, 10));
+  @return $remValue;
 }
